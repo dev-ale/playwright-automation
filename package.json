@@ -1,0 +1,30 @@
+{
+  "name": "protekta-test",
+  "version": "1.0.1",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg . --targets node16-linux-x64,node16-macos-x64,node16-win-x64",
+    "generate": "npx playwright codegen protekta.ch --viewport-size=1920,1080 --output=protekta.js",
+    "start-server": "node server.js"
+  },
+  "pkg": {
+    "scripts": "test.js",
+    "assets": [
+      "node_modules/**/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "chmod": "^0.2.1",
+    "express": "^4.19.2",
+    "playwright": "^1.45.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.3.1"
+  }
+}
